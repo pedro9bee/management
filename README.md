@@ -74,3 +74,20 @@ It will show tasks that you can run with Nx.
 - [Join the community](https://nx.dev/community)
 - [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
+
+# Commands List
+
+``` shell
+npx create-nx-workspace@latest user-mfe
+npm install @nrwl/nest 
+npx nx g @nrwl/nest:app users-api --directory=apps
+npx nx g @nrwl/nest:library users --directory=libs
+npm install @nestjs/typeorm typeorm pg
+
+npx nx serve users-api
+npx nx test
+
+cd docker
+docker-compose up --build
+
+```
