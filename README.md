@@ -86,6 +86,9 @@ npm install @nestjs/typeorm typeorm pg
 
 npx nx serve users-api
 npx nx test
+npm i telegram
+npm i dotenv
+npx nx g @nrwl/nest:app telegram-api --directory=apps
 
 cd docker
 docker-compose up --build
