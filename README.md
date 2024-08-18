@@ -94,7 +94,7 @@ cd docker
 docker-compose up --build
 
 docker-compose -f ./docker/docker-compose.yml up -d
-npx nx run-many --target=serve --projects=users-api,user-login
+npx nx run-many --target=serve --projects=be-users-api,fe-user-login
 npx npx nx generate component components/user-table --project=user-login
 
 ```

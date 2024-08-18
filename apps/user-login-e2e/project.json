@@ -1,9 +1,0 @@
-{
-  "name": "user-login-e2e",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "projectType": "application",
-  "sourceRoot": "apps/user-login-e2e/src",
-  "implicitDependencies": ["user-login"],
-  "// targets": "to see all targets run: nx show project user-login-e2e --web",
-  "targets": {}
-}

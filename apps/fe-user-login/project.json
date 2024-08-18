@@ -1,7 +1,7 @@
 {
-  "name": "user-login",
+  "name": "fe-user-login",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/user-login/src",
+  "sourceRoot": "apps/fe-user-login/src",
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project user-login --web",
