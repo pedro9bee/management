@@ -1,19 +1,21 @@
 import NxWelcome from './nx-welcome';
 
-import { Route, Routes, Link } from 'react-router-dom';
+// import { Route, Routes, Link } from 'react-router-dom';
+import UserTable from './components/user-table/user-table';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="user-login" />
+      {/* <NxWelcome title="user-login" /> */}
 
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
       {/* Feel free to move and update them to fit your needs */}
+      <UserTable />
       <br />
-      <hr />
+      {/* <hr /> */}
       <br />
-      <div role="navigation">
+      {/* <div role="navigation">
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -22,8 +24,8 @@ export function App() {
             <Link to="/page-2">Page 2</Link>
           </li>
         </ul>
-      </div>
-      <Routes>
+      </div> */}
+      {/* <Routes>
         <Route
           path="/"
           element={
@@ -41,7 +43,7 @@ export function App() {
             </div>
           }
         />
-      </Routes>
+      </Routes> */}
       {/* END: routes */}
     </div>
   );
