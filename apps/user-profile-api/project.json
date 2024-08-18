@@ -1,0 +1,26 @@
+{
+  "name": "user-profile-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/user-profile-api/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "user-profile-api:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "user-profile-api:build:development"
+        },
+        "production": {
+          "buildTarget": "user-profile-api:build:production"
+        }
+      }
+    }
+  }
+}
