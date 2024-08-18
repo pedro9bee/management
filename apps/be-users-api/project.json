@@ -1,7 +1,7 @@
 {
-  "name": "users-api",
+  "name": "be-users-api",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/users-api/src",
+  "sourceRoot": "apps/be-users-api/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -10,15 +10,15 @@
       "defaultConfiguration": "development",
       "dependsOn": ["build"],
       "options": {
-        "buildTarget": "users-api:build",
+        "buildTarget": "be-users-api:build",
         "runBuildTargetDependencies": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "users-api:build:development"
+          "buildTarget": "be-users-api:build:development"
         },
         "production": {
-          "buildTarget": "users-api:build:production"
+          "buildTarget": "be-users-api:build:production"
         }
       }
     }

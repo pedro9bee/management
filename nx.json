@@ -36,7 +36,7 @@
         "targetName": "test"
       },
       "exclude": [
-        "apps/users-api-e2e/**/*",
+        "apps/be-users-api-e2e/**/*",
         "apps/telegram-api-e2e/**/*",
         "apps/user-profile-api-e2e/**/*"
       ]
