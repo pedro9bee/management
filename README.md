@@ -90,13 +90,26 @@ npm i telegram
 npm i dotenv
 npx nx g @nrwl/nest:app telegram-api --directory=apps
 npx nx g @nrwl/react:app user-form --directory=apps
+
 npx nx g @nx/react:remote user-forgot --directory=apps/react/user-forgot
+
+## Update project.json change styles.tailwind to styles.css
+npx nx build user-forgot
+## Run project
+npx nx serve user-forgot
+
+## Run Postgres
 cd docker
 docker-compose up --build
-
 docker-compose -f ./docker/docker-compose.yml up -d
+
+## Run Many projects
 npx nx run-many --target=serve --projects=be-users-api,fe-user-table
 
+## Generate component
 npx npx nx generate component components/user-table --project=user-login
+
+## Delete Project
+npx nx g @nrwl/workspace:remove fe-user-form
 
 ```
