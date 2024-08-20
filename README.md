@@ -89,7 +89,8 @@ npx nx test
 npm i telegram
 npm i dotenv
 npx nx g @nrwl/nest:app telegram-api --directory=apps
-
+npx nx g @nrwl/react:app user-form --directory=apps
+npx nx g @nx/react:remote user-forgot --directory=apps/react/user-forgot
 cd docker
 docker-compose up --build
 
