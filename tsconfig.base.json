@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@user-mfe/users": ["libs/users/src/index.ts"]
+      "@user-mfe/users": ["libs/users/src/index.ts"],
+      "user-forgot/Module": ["apps/react/user-forgot/src/remote-entry.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
