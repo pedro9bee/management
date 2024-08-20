@@ -1,0 +1,88 @@
+{
+  "name": "remote-user-password-reset",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/remote-user-password-reset/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/remote-user-password-reset",
+        "index": "apps/remote-user-password-reset/src/index.html",
+        "baseHref": "/",
+        "main": "apps/remote-user-password-reset/src/main.ts",
+        "tsConfig": "apps/remote-user-password-reset/tsconfig.app.json",
+        "assets": [
+          "apps/remote-user-password-reset/src/favicon.ico",
+          "apps/remote-user-password-reset/src/assets"
+        ],
+        "styles": ["apps/remote-user-password-reset/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "apps/remote-user-password-reset/webpack.config.ts",
+        "postcssConfig": "apps/remote-user-password-reset/postcss.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/remote-user-password-reset/src/environments/environment.ts",
+              "with": "apps/remote-user-password-reset/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "apps/remote-user-password-reset/webpack.config.prod.ts"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "remote-user-password-reset:build",
+        "hmr": true,
+        "port": 4203
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "remote-user-password-reset:build:development"
+        },
+        "production": {
+          "buildTarget": "remote-user-password-reset:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "remote-user-password-reset:build",
+        "watch": false,
+        "port": 4203
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "remote-user-password-reset:build:development"
+        },
+        "production": {
+          "buildTarget": "remote-user-password-reset:build:production"
+        }
+      }
+    }
+  }
+}

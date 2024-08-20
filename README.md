@@ -112,4 +112,22 @@ npx npx nx generate component components/user-table --project=user-login
 ## Delete Project
 npx nx g @nrwl/workspace:remove fe-user-form
 
+## Creating new MFE project
+npx nx g @nx/react:host host-user --directory=apps/host-user --remotes=remote-user-login,remote-user-register,remote-user-password-reset
+
+### Creating separetely
+npx nx g @nrwl/react:host user-module --directory=apps/user-remotes
+
+npx nx g @nrwl/react:remote user-login --directory=apps/user-remotes/remotes
+npx nx g @nrwl/react:remote user-register --directory=apps/user-remotes/remotes
+npx nx g @nrwl/react:remote user-password-reset --directory=apps/user-remotes/remotes
+
+## Serve
+npx nx serve host-user
+
+
+## Cleaning all projects
+rm -rf dist/
+npx nx run-many --target=build --all
+
 ```

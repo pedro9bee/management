@@ -15,7 +15,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@user-mfe/users": ["libs/users/src/index.ts"]
+      "@user-mfe/users": ["libs/users/src/index.ts"],
+      "remote-user-login/Module": [
+        "apps/remote-user-login/src/remote-entry.ts"
+      ],
+      "remote-user-password-reset/Module": [
+        "apps/remote-user-password-reset/src/remote-entry.ts"
+      ],
+      "remote-user-register/Module": [
+        "apps/remote-user-register/src/remote-entry.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
